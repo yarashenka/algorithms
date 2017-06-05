@@ -1,0 +1,32 @@
+
+function binSearch (arr, value) {
+
+  var n = arr.length; 
+  var low = arr[0];
+  var high = n-1;
+    while (low < high) {
+    
+      var mid = (low + high) / 2;
+    
+      if (value == mid) {
+        console.log('your value is ' + value);
+        return 0;
+      }
+    
+      else if (value > mid) {
+        low = mid + 1;
+        console.log('hi');    /*useful for understanding how it works
+                              when you run your function*/
+      }
+    
+      else {
+        high = mid - 1;
+        console.log('oh');
+      }
+    }
+    return 1 ;
+}
+
+var arr = [1,2,3,4,5,6,7,8,9,10]; //variable name must be the same as in function
+
+binSearch(arr,x); //where 'x' - any value from 'arr'
